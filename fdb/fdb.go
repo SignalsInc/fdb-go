@@ -115,7 +115,7 @@ func APIVersion(version int) error {
 		return errorApiVersionNotSupported
 	}
 
-	if e := C.fdb_select_api_version_impl(C.int(version), 101); e != 0 {
+	if e := C.fdb_select_api_version_impl(C.int(version), 100); e != 0 {
 		return Error(e)
 	}
 
